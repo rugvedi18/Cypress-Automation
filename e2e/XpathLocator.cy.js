@@ -2,13 +2,10 @@
 
 // then go to e2e.js to write require function
 
-const { describe } = require("mocha");
-
 // then go to website to select xpath
 
 // to get all pictures from ecommerce app -
 // syntax- //ul[@id='homefeatured']/li
-
 
 describe('XPathLocators', () => {
 
