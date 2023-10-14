@@ -2,22 +2,23 @@ describe('CssLocators', () => {
 
     it('csslocators', () => {
 
-        cy.visit("https://atharvacm.netlify.app/") // website
+        cy.visit("https://dapper-pastelito-04ff24.netlify.app/") // website
 
-        cy.get(".btn-scroll").click() // go to middle
+        cy.get(".sc-crozmw").click() // by class (shop now)
 
-        //cy.get(".back-to-top").click() // go to top
+        cy.get(".bKVxEB").type("shoes")
 
-       cy.get('[href="assets/img/portfolio/eAuctionPune.png"]').click();
+        cy.get(".search").click()
 
+        cy.get('[alt="mens-shoes60"]').click()
 
-        // cy.get('[for="fac-modal-research-a-car"]').click() // research a car
+        //cy.scrollTo(0, 300);
 
-        // cy.get(".fac-modal-research-a-car-make-dropdown").type("kia") // make
+        //cy.get('button.ui.large.button:contains("Add to cart")').click({ multiple: true }); // will not work beacuse Cypress doesn't support multiple browsers windows/tabs.
 
-        // cy.get(".fac-modal-research-a-car-model-dropdown").type("ev6") // model
+        cy.scrollTo('top');
 
-        // cy.get(".make-model-search_d-make-model-search__btn-wrapper__zYuTX").click() // go
+        cy.get('[href="/shop"]').click()
 
     })
 })
