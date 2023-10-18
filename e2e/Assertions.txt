@@ -1,0 +1,5 @@
+Cypress Assertions - derived from child library
+------------------------------------------------
+
+1. Implicit Assertions - should, end
+2. Explicit Assertions - expect (used in BDD approach framework), assert (used in TDD approach framework)
