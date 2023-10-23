@@ -1,22 +1,5 @@
 // website - orangeHRM demo
 
-/*
-
-Cypress Assertions (search on google) - derived from chai library
-------------------------------------------------
-
-1. Implicit Assertions - should, and
-
-eq      - not.eq
-contain - not.contain
-include - not.include
-exist   - not.exist
-
-2. Explicit Assertions - expect (used in BDD approach framework), assert (used in TDD approach framework)
-
-*/
-
-
 describe("Assertions demo", () => {
 
     // should - has two parameters .should('key/keyword','value')
@@ -64,7 +47,7 @@ describe("Assertions demo", () => {
         cy.get("input[placeholder='Password']").type('admin123')
         cy.get("button[type='submit']").click()
 
-        let expName = "as s";
+        let expName = "Burak Yazıcı";
 
         cy.get(".oxd-userdropdown-name").then((x) => {
 
