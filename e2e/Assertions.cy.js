@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 // website - orangeHRM demo
 
 describe("Assertions demo", () => {

@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 // ecommerce website
 
 describe('CssLocators', () => {

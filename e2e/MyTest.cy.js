@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 describe('My Test', () => {
     it('test1', () => {
         // launch an application - positive test
