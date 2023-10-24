@@ -1,4 +1,11 @@
+# Websites to practice -
 
+OrangeHRM demo -            https://opensource-demo.orangehrmlive.com/
+Test Automation practice -  https://testautomationpractice.blogspot.com/
+Theme forest -              https://themeforest.net/
+Ecommerce website -         https://dapper-pastelito-04ff24.netlify.app/
+Zoho commerce demo -        https://www.zoho.com/commerce/free-demo.html
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Folder Structure, files and their use #
 ------------------------------------------------------------------------------------------------
