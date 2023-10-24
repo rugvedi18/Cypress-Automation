@@ -1,0 +1,31 @@
+
+
+# Folder Structure, files and their use #
+------------------------------------------------------------------------------------------------
+> cypress               - main folder
+    > downloads         - contains all downloaded files during automation
+    > e2e               - contains test cases called spec files
+    > fixtures          - static data
+    > screenshots       - screen captures while running tests
+    > support           - reusable scripts
+        > commands.js   - we can create custom commands/override commands
+        > e2e.js        - loads/runs before the e2e folder like prerequisits
+    > videos
+    > node_modules      - modules for cypress by npm install
+    - cypress.config.js - contains cypress configurations
+    - package.json      - contains dependencies, additional plugins installed
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Cypress Assertions (search on google) - derived from chai library #
+------------------------------------------------------------------------------------------------
+
+1. Implicit Assertions - should, and
+
+eq      - not.eq
+contain - not.contain
+include - not.include
+exist   - not.exist
+
+2. Explicit Assertions - expect (used in BDD approach framework), assert (used in TDD approach framework)
+
+------------------------------------------------------------------------------------------------------------------------------------------------

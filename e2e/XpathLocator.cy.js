@@ -12,7 +12,7 @@ describe('XPathLocators', () => {
     it('find no of products', () => {
         cy.visit("https://")
         //cy.get
-        cy.xpath("//ul[@id='homefeatured']").should('have,length',7)
+        cy.xpath("//ul[@id='homefeatured']").should('have,length', 7)
 
     })
 })
