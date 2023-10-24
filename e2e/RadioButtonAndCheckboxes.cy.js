@@ -23,6 +23,9 @@ describe("Check UI Elements", () => {
         cy.get("input#monday").uncheck().should('not.be.checked') // uncheck
 
         // selecting all the checkboxes
+        cy.get(".form-check-input[type='checkbox']").check().should('be.checked')
+        cy.get(".form-check-input[type='checkbox']").uncheck().should('not.be.checked')
+        cy.get(".form-check-input[type='checkbox']").first().check().should('be.checked')
 
         // select from drop-down
         cy.get("#country").select('United Kingdom').should('have.value', 'uk')
