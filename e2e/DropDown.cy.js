@@ -44,5 +44,17 @@ This is useful if you want to handle the error in a specific way and do not want
   it("Dynamic Dropdown", () => {
     cy.visit("https://www.google.com/")
     cy.get("textarea[name='q']").type("cypress automation")
+    cy.wait(3000)
+    // cy.get(".wM6W7d").contains("cypress automation tutorial").click()
+    // to checl number of suggestions
+    cy.get("div.wM6W7d>span").should("have.length", 12)
+
+    // for each loop to check all values present in div
+    // sometimes it is working
+    cy.get("div.wM6W7d>span").each(($el, index, $list) => {
+      if ($el.text() == "cypress automation tutorial") {
+        cy.wrap($el).click()
+      }
+    })
   })
 })
