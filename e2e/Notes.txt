@@ -6,7 +6,7 @@ Theme forest -              https://themeforest.net/
 Ecommerce website -         https://dapper-pastelito-04ff24.netlify.app/
 Zoho commerce demo -        https://www.zoho.com/commerce/free-demo.html
 Dummy ticket visa -         https://www.dummyticket.com/dummy-ticket-for-visa-application/
-Javascript Alerts -         https://the-internet.herokuapp.com/javascript_alerts
+Javascript Alerts -         https://the-internet.herokuapp.com/javascript_alerts, basic_auth, windows
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Folder Structure, files and their use #
