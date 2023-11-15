@@ -42,15 +42,52 @@ describe("Handle Tables", () => {
     ).contains("hfgjhgjgjggj@gmail.com")
   })
 
-  it.only("Read all the rows and columns data in the first page", () => {
+  it("Read all the data in rows & columns present on the first page (without pagination)", () => {
     cy.get("table[class='table table-bordered table-hover']>tbody>tr").each(
-      ($row, index, $rows) => {
+      // ($row, index, $rows)
+      ($row) => {
         cy.wrap($row).within(() => {
-          cy.get("td").each(($col, index, $cols) => {
+          // ($col, index, $cols)
+          cy.get("td").each(($col) => {
             cy.log($col.text())
           })
         })
       }
     )
+  })
+
+  it.only("pagination", () => {
+    // find total number of pages
+    cy.get(".col-sm-6.text-end").then((e) => {
+      let mytext = e.text() // Showing 1 to 10 of 16377 (1638 Pages)
+      let totalPages = mytext.substring(
+        mytext.indexOf("(") + 1,
+        mytext.indexOf("Pages") - 1
+      )
+      cy.log("Total number of pages in table => ", totalPages)
+    })
+
+    // extract data from any 3 pages
+    let total_pages = 4
+    // p is representing page number
+    for (let p = 1; p <= total_pages; p++) {
+      if (total_pages > 1) {
+        // first open the page
+        cy.log("Active page is => ", p)
+        cy.get(".pagination>li:nth-child(" + p + ")").click()
+        cy.wait(3000)
+
+        // extract data - all email ids present on the page
+        cy.get("table[class='table table-bordered table-hover']>tbody>tr").each(
+          ($row) => {
+            cy.wrap($row).within(() => {
+              cy.get("td:nth-child(3)").then((e) => {
+                cy.log(e.text())
+              })
+            })
+          }
+        )
+      }
+    }
   })
 })
