@@ -1,10 +1,6 @@
 // https://demo.opencart.com/admin [admin:admin]
 // go to customers -> customers, you will see the table
 
-// demo.opencart/admin is having security to verify you are human so using alternate website to handle tables -
-// https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html
-// refer file - TechlisticTable.cy.js
-
 describe("Handle Tables", () => {
   // beforeEach is one of the hooks in cypress
   beforeEach("Login", () => {
