@@ -7,12 +7,15 @@ Ecommerce website -         https://dapper-pastelito-04ff24.netlify.app/
 Zoho commerce demo -        https://www.zoho.com/commerce/free-demo.html
 Dummy ticket visa -         https://www.dummyticket.com/dummy-ticket-for-visa-application/
 Javascript Alerts -         https://the-internet.herokuapp.com/javascript_alerts, basic_auth, windows
-demo opencart -             https://demo.opencart.com/admin [admin,admin]
-handle table techlistic-    https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html
-for right click action -    https://swisnl.github.io/jQuery-contextMenu/demo.html
-for double click action -   https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick3
-drag and drop action -      https://www.javascripttutorial.net/sample/webapis/drag-n-drop-basics/
-scrolling bar action -      https://www.countries-ofthe-world.com/flags-of-the-world.html
+Demo opencart -             https://demo.opencart.com/admin [admin,admin]
+Handle table techlistic-    https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html
+For right click action -    https://swisnl.github.io/jQuery-contextMenu/demo.html
+For double click action -   https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick3
+Drag and drop action -      https://www.javascripttutorial.net/sample/webapis/drag-n-drop-basics/
+Scrolling bar action -      https://www.countries-ofthe-world.com/flags-of-the-world.html
+Single File upload -        https://the-internet.herokuapp.com/upload
+Multiple file upload -      https://davidwalsh.name/demo/multiple-file-upload.php
+Shadow DOM file upload -    https://www.htmlelements.com/demos/fileupload/shadow-dom/index.htm
 ------------------------------------------------------------------------------------------------------------------------------------------------
 # Folder Structure, files and their use #
 
