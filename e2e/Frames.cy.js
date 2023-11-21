@@ -27,7 +27,7 @@ describe("Handling iFrames", () => {
     cy.get("[title='Bold']").click()
   })
 
-  // npm i -D cypress-iframe
+  // install package - npm i -D cypress-iframe - to load iframes
   it.only("Approach3 - by using cypress iFrame plugin", () => {
     cy.visit("https://the-internet.herokuapp.com/iframe")
 

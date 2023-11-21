@@ -32,12 +32,12 @@ describe("Mouse Operations", () => {
     cy.get(".context-menu-icon-copy > span").should("be.visible", "Copy")
   })
 
+  // install package - npm i cypress-iframe - for iframes loading
   it("Double Click", () => {
     cy.visit(
       "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick3"
     )
     cy.frameLoaded("#iframeResult") // to load the iframe
-
     // Approach 1
     // cy.iframe("#iframeResult").find("button[ondblclick='myFunction()']").trigger("dblclick")
     // cy.iframe("#iframeResult").find("#field2").should("have.value", "Hello World!")
@@ -51,8 +51,8 @@ describe("Mouse Operations", () => {
       .should("have.value", "Hello World!")
   })
 
+  // install package - npm i @4tw/cypress-drag-drop - plugin to drag and drop action
   it("Drag and Drop using Plugin", () => {
-    // npm i @4tw/cypress-drag-drop - plugin to drag and drop action
     cy.visit(
       "https://www.javascripttutorial.net/sample/webapis/drag-n-drop-basics/"
     )
