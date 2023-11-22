@@ -44,3 +44,6 @@ exist   - not.exist
 2. Explicit Assertions - expect (used in BDD approach framework), assert (used in TDD approach framework)
 ------------------------------------------------------------------------------------------------------------------------------------------------
 # To use common commands for multiple files, go to commands.js and write your custom code
+------------------------------------------------------------------------------------------------------------------------------------------------
+# Types of Hooks :-
+1. before   2. after  3. beforeEach    4. afterEach
