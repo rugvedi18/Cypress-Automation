@@ -1,5 +1,5 @@
 // to use test data into the tests e.g. to use test data having file extension json - store files like these into fixtures folder
-
+// single set of data - orangehrm.json
 describe("Fixtures", () => {
   // if there are multiple it blocks which need files from fixture then use before hook
   let userdata

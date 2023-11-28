@@ -1,5 +1,5 @@
-// Dta Driven testing - test is driven by sets of data
-
+// Data Driven testing - test is driven by sets of data
+// multiple sets of data - orangehrm2.json
 describe("DataDrivenTest", () => {
   it("DDT", () => {
     cy.fixture("orangehrm2").then((data) => {
