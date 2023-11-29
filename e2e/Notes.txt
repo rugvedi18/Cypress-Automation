@@ -16,6 +16,7 @@ Scrolling bar action -      https://www.countries-ofthe-world.com/flags-of-the-w
 Single File upload -        https://the-internet.herokuapp.com/upload
 Multiple file upload -      https://davidwalsh.name/demo/multiple-file-upload.php
 Shadow DOM file upload -    https://www.htmlelements.com/demos/fileupload/shadow-dom/index.htm
+Custom commands -           https://demo.nopcommerce.com/
 ------------------------------------------------------------------------------------------------------------------------------------------------
 # Folder Structure, files and their use #
 
