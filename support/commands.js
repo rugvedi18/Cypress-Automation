@@ -36,23 +36,37 @@ Cypress.Commands.add("getIframe", (iframe) => {
     .then(cy.wrap)
 })
 
-// using custom command for clicking on link using label
-Cypress.Commands.add("clicklink", (label) => {
-  cy.get("a").contains(label).click() // containes is a case sensitive command
+// Custom command for clicking on a link by its text
+Cypress.Commands.add("clickLinkByText", (label) => {
+  cy.get("a").contains(label).click() // contains is a case sensitive command
 })
 
-// overwrite contains()
-Cypress.Commands.overwrite(
-  "contains",
-  (originalFn, subject, filter, text, options = {}) => {
-    // determine if a filter argument was passed
-    if (typeof text == "object") {
-      options = text
-      text = filter
-      filter = undefined
-    }
-    options.matchCase = false
-
-    return originalFn(subject, filter, text, options)
+// overwriting type command to hide password into the console log
+Cypress.Commands.overwrite("type", (originalFn, element, text, options) => {
+  if (options && options.sensitive) {
+    // turn off original log
+    options.log = false
+    // create our own log with masked message
+    Cypress.log({
+      $el: element,
+      name: "type",
+      message: "*".repeat(text.length),
+    })
   }
-)
+  return originalFn(element, text, options)
+})
+
+// overwriting contains command to match case sensitive letters
+// Cypress.Commands.overwrite(
+//   "contains",
+//   (originalFn, subject, filter, text, options) => {
+//     // determine if a filter argument was passed
+//     if (typeof text == "object" && options.matchCase) {
+//       options = text
+//       text = filter
+//       filter = undefined
+//     }
+//     // options.matchCase = false
+//     return originalFn(element, text, options)
+//   }
+// )
