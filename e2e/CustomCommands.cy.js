@@ -13,16 +13,15 @@ describe("Custom Commands", () => {
     cy.get("h1").should("have.text", "Apple MacBook Pro 13-inch")
   })
 
-  it.only("Overwriting Existing Command", () => {
-    // password is visible with type command into the log so we have to unhide it into the log
+  it("Overwriting Existing Command - type", () => {
+    // Visit the login page
     cy.visit("https://demo.nopcommerce.com/login?returnUrl=%2F")
-    // to hide password into the log (see commands.js)
-    cy.get("#Email").type("admin@gmail.com")
-    cy.get("#Password").type("admin123", { sensitive: true })
-    // to check case sensitivity (see commands.js)
-    //cy.clickLinkByText("LOG IN", { matchCase: false })
-    //cy.get(".ico-logout").should("have.text", "Log out")
-  })
 
-  it("Login Command", () => {})
+    // Enter login credentials
+    cy.get("#Email").type("admin123@gmail.com")
+    cy.get("#Password").type("admin123", { sensitive: true })
+
+    // Click the login button
+    cy.get(".button-1.login-button").click()
+  })
 })

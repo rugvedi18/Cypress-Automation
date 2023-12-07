@@ -55,18 +55,3 @@ Cypress.Commands.overwrite("type", (originalFn, element, text, options) => {
   }
   return originalFn(element, text, options)
 })
-
-// overwriting contains command to match case sensitive letters
-// Cypress.Commands.overwrite(
-//   "contains",
-//   (originalFn, subject, filter, text, options) => {
-//     // determine if a filter argument was passed
-//     if (typeof text == "object" && options.matchCase) {
-//       options = text
-//       text = filter
-//       filter = undefined
-//     }
-//     // options.matchCase = false
-//     return originalFn(element, text, options)
-//   }
-// )
