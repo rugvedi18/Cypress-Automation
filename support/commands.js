@@ -79,3 +79,10 @@ Cypress.Commands.overwriteQuery(
     return contains0(filter, text, userOptions)
   }
 )
+
+// custom command for login by username and password
+Cypress.Commands.add("loginapp", (email, password) => {
+  cy.get("#Email").type(email)
+  cy.get("#Password").type(password)
+  cy.get("button[class='button-1 login-button']").click()
+})

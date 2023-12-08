@@ -25,12 +25,19 @@ describe("Custom Commands", () => {
     cy.get(".button-1.login-button").click()
   })
 
-  it.only("Overwriting contains command", () => {
+  it("Overwriting contains command", () => {
     cy.visit("https://demo.nopcommerce.com/")
     cy.clickLinkByText("APPLE MACBOOK PRO 13-inch")
     cy.get("div[class='product-name'] h1").should(
       "have.text",
       "Apple MacBook Pro 13-inch"
     )
+  })
+
+  it.only("Login command", () => {
+    cy.visit("https://demo.nopcommerce.com/")
+    cy.clickLinkByText("log in") // custom command
+    cy.loginapp("admin123@gmail.com", "admin123") // custom command
+    cy.get(".ico-logout").should("have.text", "Log out")
   })
 })
