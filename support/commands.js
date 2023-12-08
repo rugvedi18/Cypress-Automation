@@ -55,3 +55,27 @@ Cypress.Commands.overwrite("type", (originalFn, element, text, options) => {
   }
   return originalFn(element, text, options)
 })
+
+// overwriting conatins command to make label in sensitive
+Cypress.Commands.overwriteQuery(
+  "contains",
+  function (contains, filter, text, userOptions = {}) {
+    // This is parameter resolution from Cypress v12.7.0 source
+    if (Cypress._.isRegExp(text)) {
+      // .contains(filter, text)
+      // Do nothing
+    } else if (Cypress._.isObject(text)) {
+      // .contains(text, userOptions)
+      userOptions = text
+      text = filter
+      filter = ""
+    } else if (Cypress._.isUndefined(text)) {
+      // .contains(text)
+      text = filter
+      filter = ""
+    }
+    userOptions.matchCase = false
+    let contains0 = contains.bind(this) // this line fixes the error
+    return contains0(filter, text, userOptions)
+  }
+)

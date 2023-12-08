@@ -24,4 +24,13 @@ describe("Custom Commands", () => {
     // Click the login button
     cy.get(".button-1.login-button").click()
   })
+
+  it.only("Overwriting contains command", () => {
+    cy.visit("https://demo.nopcommerce.com/")
+    cy.clickLinkByText("APPLE MACBOOK PRO 13-inch")
+    cy.get("div[class='product-name'] h1").should(
+      "have.text",
+      "Apple MacBook Pro 13-inch"
+    )
+  })
 })
