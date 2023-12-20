@@ -1,3 +1,6 @@
+npx cypress run --spec filename (to run specific file in terminal, headless mode)
+npx cypress open (to open the filr from cypress)
+------------------------------------------------------------------------------------------------------------------------------------------------
 # Websites to practice -
 
 OrangeHRM demo -            https://opensource-demo.orangehrmlive.com/
@@ -48,3 +51,13 @@ exist   - not.exist
 ------------------------------------------------------------------------------------------------------------------------------------------------
 # Types of Hooks :-
 1. before   2. after  3. beforeEach    4. afterEach
+------------------------------------------------------------------------------------------------------------------------------------------------
+# How to generate HTML reports
+1. cypress-mochawesome-reporter -> modify changes to files as- https://www.npmjs.com/package/cypress-mochawesome-reporter
+Run one specific file using -> npx cypress run --spec cypress\e2e\MyTest.cy.js (paste relative path of the file)
+(If want to run on chrome -> npx cypress run --spec cypress\e2e\MyTest.cy.js --browser chrome)
+(If want to run in headed mode -> npx cypress run --headed --spec cypress\e2e\MyTest.cy.js --browser chrome)
+After executing the command, folder name "reports" will be created
+Copy complete path of the file "index.html" and paste on the browser
+------------------------------------------------------------------------------------------------------------------------------------------------
+# Page Object Model Pattern in Cypress
