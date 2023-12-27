@@ -1,5 +1,6 @@
 npx cypress run --spec filename (to run specific file in terminal, headless mode)
 npx cypress open (to open the filr from cypress)
+/// <reference types="Cypress" />
 ------------------------------------------------------------------------------------------------------------------------------------------------
 # Websites to practice -
 
@@ -60,4 +61,10 @@ Run one specific file using -> npx cypress run --spec cypress\e2e\MyTest.cy.js (
 After executing the command, folder name "reports" will be created
 Copy complete path of the file "index.html" and paste on the browser
 ------------------------------------------------------------------------------------------------------------------------------------------------
-# Page Object Model Pattern in Cypress
+# Page Object Model Pattern in Cypress (PageObjectModel.cy.js, LoginPage.js)
+Every test method contains Page elements, Actions and Validations
+Page Object Model seperates all these in one file and actual test scriptes in another file
+
+Problem withoud Page Object Model -
+1. Duplication of elements/locators
+2. Updation
