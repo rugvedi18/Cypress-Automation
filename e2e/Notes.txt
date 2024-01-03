@@ -40,7 +40,6 @@ Custom commands -           https://demo.nopcommerce.com/
 # Cypress Assertions (search on google) - derived from chai library #
 
 1. Implicit Assertions - should, and
-
 eq      - not.eq
 contain - not.contain
 include - not.include
@@ -51,9 +50,11 @@ exist   - not.exist
 # To use common commands for multiple files, go to commands.js and write your custom code
 ------------------------------------------------------------------------------------------------------------------------------------------------
 # Types of Hooks :-
+
 1. before   2. after  3. beforeEach    4. afterEach
 ------------------------------------------------------------------------------------------------------------------------------------------------
 # How to generate HTML reports
+
 1. cypress-mochawesome-reporter -> modify changes to files as- https://www.npmjs.com/package/cypress-mochawesome-reporter
 Run one specific file using -> npx cypress run --spec cypress\e2e\MyTest.cy.js (paste relative path of the file)
 (If want to run on chrome -> npx cypress run --spec cypress\e2e\MyTest.cy.js --browser chrome)
@@ -62,9 +63,13 @@ After executing the command, folder name "reports" will be created
 Copy complete path of the file "index.html" and paste on the browser
 ------------------------------------------------------------------------------------------------------------------------------------------------
 # Page Object Model Pattern in Cypress (PageObjectModel.cy.js, LoginPage.js)
+
 Every test method contains Page elements, Actions and Validations
 Page Object Model seperates all these in one file and actual test scriptes in another file
 
 Problem withoud Page Object Model -
 1. Duplication of elements/locators
 2. Updation
+------------------------------------------------------------------------------------------------------------------------------------------------
+# Cypress API Testing -
+
