@@ -1,13 +1,15 @@
 // cy.request(request type, url, body)
 
 describe("HTTP Requests", () => {
-  it("GET Call", () => {
+  // GET
+  it("GET method", () => {
     cy.request("GET", "https://jsonplaceholder.typicode.com/posts/1")
       .its("status")
       .should("equal", 200)
   })
 
-  it("POST Call", () => {
+  // POST
+  it("POST method", () => {
     cy.request({
       method: "POST",
       url: "https://jsonplaceholder.typicode.com/posts/",
@@ -19,5 +21,31 @@ describe("HTTP Requests", () => {
     })
       .its("status")
       .should("equal", 201)
+  })
+
+  // PUT
+  it("PUT method", () => {
+    cy.request({
+      method: "PUT",
+      url: "https://jsonplaceholder.typicode.com/posts/1",
+      body: {
+        title: "Test PUT",
+        body: "This is a PUT call",
+        userid: 1,
+        id: 1,
+      },
+    })
+      .its("status")
+      .should("equal", 200)
+  })
+
+  // DELETE
+  it("DELETE method", () => {
+    cy.request({
+      method: "DELETE",
+      url: "https://jsonplaceholder.typicode.com/posts/1",
+    })
+      .its("status")
+      .should("equal", 200)
   })
 })
