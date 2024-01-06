@@ -73,3 +73,8 @@ Problem withoud Page Object Model -
 ------------------------------------------------------------------------------------------------------------------------------------------------
 # Cypress API Testing -
 
+Three different ways to crerate a body for post request
+1. Hardcore the data
+2. Dynamically generate the data
+3. Using fixtures
+
