@@ -78,3 +78,7 @@ Three different ways to crerate a body for post request
 2. Dynamically generate the data
 3. Using fixtures
 
+How to pass to request body -
+ Query parameters
+ Cookies, Headers
+ Token Authorization
