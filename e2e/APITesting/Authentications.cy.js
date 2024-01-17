@@ -13,7 +13,7 @@ describe("AUthentications", () => {
     })
   })
 
-  it.only("Digest Authentication", () => {
+  it.skip("Digest Authentication", () => {
     cy.log("b4 Response", response)
     cy.request({
       method: "GET",
@@ -31,6 +31,7 @@ describe("AUthentications", () => {
   })
 
   it("Bearer Token Auth", () => {
+    const token = "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"
     cy.request({
       method: "GET",
       url: "https://postman-echo.com/basic-auth",
@@ -38,12 +39,25 @@ describe("AUthentications", () => {
         user: "postman",
         pass: "password",
         headers: {
-          Authorization: "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",
+          Authorization: "Bearer " + token,
         },
       },
     }).then((response) => {
       expect(response.status).to.eq(200)
       expect(response.body.authenticated).to.eq(true)
+    })
+  })
+
+  it("API Key Auth", () => {
+    const APIKey = "04906577addda35ea2294e7c1fe0258c"
+    cy.request({
+      method: "GET",
+      url: "https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99",
+      qs: {
+        appid: APIKey,
+      },
+    }).then((response) => {
+      expect(response.status).to.eq(200)
     })
   })
 })
