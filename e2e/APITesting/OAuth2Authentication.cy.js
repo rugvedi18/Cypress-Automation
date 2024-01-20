@@ -7,3 +7,37 @@
 // Instructions for generating Auth Token:
 // 1. Utilize the provided client ID, client secret, and code to obtain the authentication token in Postman.
 // For e.g https://github.com/login/oauth/access_token?client_id={client id}&client_secret={client secret}&code={auth code}
+
+describe("OAuth2", () => {
+  let accessToken
+  it("Get OAuth2 access token", () => {
+    // get token and response will be access token
+    cy.request({
+      method: "POST",
+      url: "https://github.com/login/oauth/access_token",
+      qs: {
+        client_id: "77f919dd52ccda516b09",
+        client_secret: "228b5a9610028dbe28d47c82b8a0ab8670f05df0",
+        code: "d3d3b568581141a2d6e8",
+      },
+    }).then((response) => {
+      // access token is in text format, so we have to split it to get exact access token
+      // access_token=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&scope=&token_type=bearer
+      const params = response.body.split("&")
+      accessToken = params[0].split("=")[1]
+    })
+  })
+
+  it("OAuth2 Request", () => {
+    cy.request({
+      method: "GET",
+      url: "https://api.github.com/user/repos",
+      headers: {
+        Authorization: "Bearer " + accessToken,
+      },
+    }).then((response) => {
+      expect(response.status).to.eq(200)
+      expect(response.body[0].id).to.eq(374384709)
+    })
+  })
+})
