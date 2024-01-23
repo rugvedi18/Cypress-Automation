@@ -18,7 +18,7 @@ describe("OAuth2", () => {
       qs: {
         client_id: "77f919dd52ccda516b09",
         client_secret: "228b5a9610028dbe28d47c82b8a0ab8670f05df0",
-        code: "d3d3b568581141a2d6e8",
+        code: "7629bca3e6f391925a6e",
       },
     }).then((response) => {
       // access token is in text format, so we have to split it to get exact access token

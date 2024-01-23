@@ -4,6 +4,7 @@ npx cypress open (to open the filr from cypress)
 ------------------------------------------------------------------------------------------------------------------------------------------------
 # Websites to practice -
 
+SDET QA Software Testing -  https://www.pavantestingtools.com/?code=7629bca3e6f391925a6e
 OrangeHRM demo -            https://opensource-demo.orangehrmlive.com/
 Test Automation practice -  https://testautomationpractice.blogspot.com/
 Theme forest -              https://themeforest.net/
@@ -82,3 +83,6 @@ How to pass to request body -
  Query parameters
  Cookies, Headers
  Token Authorization
+
+API Chaining
+ req -> API -> response -> API -> response - API
